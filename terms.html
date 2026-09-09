@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — UDCAMERA Content Publisher</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #EAE7E0;
+    --surface: #FFFFFF;
+    --text: #221F1A;
+    --text-muted: #6E6A60;
+    --accent: #A15C2E;
+    --accent-soft: #E7D9C8;
+    --border: #D9D4C8;
+    --serif: "Source Serif 4", Georgia, "Noto Serif Thai", serif;
+    --sans: "IBM Plex Sans", "Noto Sans Thai", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16140F;
+      --surface: #201D17;
+      --text: #ECE7DC;
+      --text-muted: #9C9686;
+      --accent: #E0975A;
+      --accent-soft: #3A2E20;
+      --border: #35301F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16140F;
+    --surface: #201D17;
+    --text: #ECE7DC;
+    --text-muted: #9C9686;
+    --accent: #E0975A;
+    --accent-soft: #3A2E20;
+    --border: #35301F;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .wordmark {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .topbar nav {
+    display: flex;
+    gap: 1.25rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .topbar nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .topbar nav a:hover, .topbar nav a:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .topbar nav a[aria-current="page"] {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+
+  .doc-label {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 1.1rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.15rem;
+    line-height: 1.15;
+    margin: 0 0 0.6rem;
+    text-wrap: balance;
+  }
+
+  .meta {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0 0 2.6rem;
+    padding-bottom: 2.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .meta span { font-variant-numeric: tabular-nums; }
+
+  .intro {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin-bottom: 2.8rem;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 0.2rem 1.1rem;
+    margin-bottom: 2.2rem;
+  }
+  .num {
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 0.85rem;
+    padding-top: 0.3rem;
+    font-variant-numeric: tabular-nums;
+  }
+  section h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.18rem;
+    margin: 0 0 0.5rem;
+    grid-column: 2;
+  }
+  section p, section ul {
+    grid-column: 2;
+    margin: 0 0 0.7rem;
+    color: var(--text);
+  }
+  section p:last-child, section ul:last-child { margin-bottom: 0; }
+  section ul { padding-left: 1.1rem; }
+  section li { margin-bottom: 0.35rem; }
+  section code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.05em 0.35em;
+    border-radius: 3px;
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover, footer a:focus-visible { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    section { grid-template-columns: 1fr; }
+    .num { grid-column: 1; padding-top: 0; }
+    section h2, section p, section ul { grid-column: 1; }
+    h1 { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="wordmark" href="index.html">UDCAMERA</a>
+  <nav>
+    <a href="terms.html" aria-current="page">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+</div>
+
+<main>
+  <span class="doc-label">Legal · Developer Platform Documentation</span>
+  <h1>Terms of Service</h1>
+  <p class="meta">UDCAMERA Content Publisher &nbsp;·&nbsp; Effective <span>September 9, 2026</span></p>
+
+  <p class="intro">
+    UDCAMERA is a used-camera retailer (Udon Thani &ndash; Bang Saen). These terms cover
+    <strong>UDCAMERA Content Publisher</strong>, an internal application UDCAMERA built to publish
+    its own product and demo videos to its own TikTok, Facebook, and YouTube accounts.
+  </p>
+
+  <section>
+    <span class="num">01</span>
+    <h2>About this tool</h2>
+    <p>
+      UDCAMERA Content Publisher is operated solely by UDCAMERA for its own marketing operations.
+      It is not a public product, is not distributed to third parties, and is not available for use
+      by anyone outside UDCAMERA's own staff.
+    </p>
+  </section>
+
+  <section>
+    <span class="num">02</span>
+    <h2>What the tool does</h2>
+    <p>
+      Once connected to a UDCAMERA-owned TikTok account, the tool uses TikTok's Content Posting API
+      to upload video files and captions supplied directly by UDCAMERA staff, and to publish them to
+      that same account. No content is posted without a staff member deliberately starting the upload
+      from within the tool.
+    </p>
+  </section>
+
+  <section>
+    <span class="num">03</span>
+    <h2>Acceptable use</h2>
+    <p>
+      The tool may only be used by authorized UDCAMERA staff, to publish content UDCAMERA owns or has
+      the rights to distribute, in compliance with:
+    </p>
+    <ul>
+      <li>TikTok's Community Guidelines, Terms of Service, and Developer Terms of Service</li>
+      <li>Facebook's and YouTube's respective platform and API policies</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="num">04</span>
+    <h2>No warranty</h2>
+    <p>
+      This tool is provided as an internal operational aid, <code>as-is</code>, without warranty of
+      any kind. UDCAMERA does not guarantee uninterrupted availability of the tool or of the
+      third-party platforms it publishes to.
+    </p>
+  </section>
+
+  <section>
+    <span class="num">05</span>
+    <h2>Changes to these terms</h2>
+    <p>
+      These terms may be updated as the tool's functionality changes. The version in effect is always
+      the one published at this URL.
+    </p>
+  </section>
+
+  <section>
+    <span class="num">06</span>
+    <h2>Contact</h2>
+    <p>Questions about this tool or these terms: <a href="mailto:flykungza@gmail.com">flykungza@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 UDCAMERA</span>
+    <a href="privacy.html">Privacy Policy &rarr;</a>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — UDCAMERA Content Publisher</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #EAE7E0;
+    --surface: #FFFFFF;
+    --text: #221F1A;
+    --text-muted: #6E6A60;
+    --accent: #A15C2E;
+    --accent-soft: #E7D9C8;
+    --border: #D9D4C8;
+    --serif: "Source Serif 4", Georgia, "Noto Serif Thai", serif;
+    --sans: "IBM Plex Sans", "Noto Sans Thai", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16140F;
+      --surface: #201D17;
+      --text: #ECE7DC;
+      --text-muted: #9C9686;
+      --accent: #E0975A;
+      --accent-soft: #3A2E20;
+      --border: #35301F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16140F;
+    --surface: #201D17;
+    --text: #ECE7DC;
+    --text-muted: #9C9686;
+    --accent: #E0975A;
+    --accent-soft: #3A2E20;
+    --border: #35301F;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .wordmark {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .topbar nav {
+    display: flex;
+    gap: 1.25rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .topbar nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .topbar nav a:hover, .topbar nav a:focus-visible {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .topbar nav a[aria-current="page"] {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+
+  .doc-label {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 1.1rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.15rem;
+    line-height: 1.15;
+    margin: 0 0 0.6rem;
+    text-wrap: balance;
+  }
+
+  .meta {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0 0 2.6rem;
+    padding-bottom: 2.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .meta span { font-variant-numeric: tabular-nums; }
+
+  .intro {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 60ch;
+    margin-bottom: 2.8rem;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 0.2rem 1.1rem;
+    margin-bottom: 2.2rem;
+  }
+  .num {
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 0.85rem;
+    padding-top: 0.3rem;
+    font-variant-numeric: tabular-nums;
+  }
+  section h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.18rem;
+    margin: 0 0 0.5rem;
+    grid-column: 2;
+  }
+  section p, section ul {
+    grid-column: 2;
+    margin: 0 0 0.7rem;
+    color: var(--text);
+  }
+  section p:last-child, section ul:last-child { margin-bottom: 0; }
+  section ul { padding-left: 1.1rem; }
+  section li { margin-bottom: 0.35rem; }
+  section code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.05em 0.35em;
+    border-radius: 3px;
+  }
+
+  .scope-table {
+    grid-column: 2;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    margin-bottom: 0.7rem;
+  }
+  .scope-table th, .scope-table td {
+    text-align: left;
+    padding: 0.5rem 0.7rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .scope-table th {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  .scope-table code {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.05em 0.35em;
+    border-radius: 3px;
+  }
+  .table-wrap { grid-column: 2; overflow-x: auto; }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover, footer a:focus-visible { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    section { grid-template-columns: 1fr; }
+    .num { grid-column: 1; padding-top: 0; }
+    section h2, section p, section ul, .table-wrap { grid-column: 1; }
+    h1 { font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="wordmark" href="index.html">UDCAMERA</a>
+  <nav>
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html" aria-current="page">Privacy Policy</a>
+  </nav>
+</div>
+
+<main>
+  <span class="doc-label">Legal · Developer Platform Documentation</span>
+  <h1>Privacy Policy</h1>
+  <p class="meta">UDCAMERA Content Publisher &nbsp;·&nbsp; Effective <span>September 9, 2026</span></p>
+
+  <p class="intro">
+    This policy explains what data <strong>UDCAMERA Content Publisher</strong> accesses through
+    TikTok's, Facebook's, and YouTube's APIs, and how that data is used. The tool connects only to
+    social media accounts owned by UDCAMERA itself &mdash; it does not interact with, collect from,
+    or publish to any other person's account.
+  </p>
+
+  <section>
+    <span class="num">01</span>
+    <h2>Data accessed via TikTok</h2>
+    <p>When a UDCAMERA-owned TikTok account is connected, the tool requests only the scopes needed to operate:</p>
+    <div class="table-wrap">
+      <table class="scope-table">
+        <thead><tr><th>Scope</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td><code>user.info.basic</code></td><td>Confirming which UDCAMERA account is connected</td></tr>
+          <tr><td><code>video.publish</code></td><td>Uploading and publishing video files to that same account</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The tool does not read TikTok followers, comments, direct messages, analytics, or any other user's data.</p>
+  </section>
+
+  <section>
+    <span class="num">02</span>
+    <h2>Content supplied by UDCAMERA staff</h2>
+    <p>
+      Video files, cover images, titles, descriptions, and hashtags are entered directly by UDCAMERA
+      staff for each post. This is UDCAMERA's own marketing material, sent to TikTok's, Facebook's, or
+      YouTube's servers only to publish it &mdash; it is not stored on any other server, and is not
+      sold, shared, or reused for any purpose beyond publishing the post the staff member requested.
+    </p>
+  </section>
+
+  <section>
+    <span class="num">03</span>
+    <h2>Access tokens</h2>
+    <p>
+      OAuth access tokens issued by TikTok, Facebook, and YouTube are stored locally on the device
+      running the tool and are used only to authorize posting to UDCAMERA's own connected accounts.
+      They are never transmitted to any third party.
+    </p>
+  </section>
+
+  <section>
+    <span class="num">04</span>
+    <h2>Retention &amp; revocation</h2>
+    <p>
+      Because the tool holds no data belonging to the public &mdash; only its own operator's
+      connection tokens &mdash; there is no third-party user data to retain or delete. UDCAMERA staff
+      can revoke the tool's access at any time from TikTok's (or Facebook's/YouTube's) app-permissions
+      settings, which immediately invalidates all stored tokens.
+    </p>
+  </section>
+
+  <section>
+    <span class="num">05</span>
+    <h2>Contact</h2>
+    <p>Questions or data-related requests: <a href="mailto:flykungza@gmail.com">flykungza@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <span>&copy; 2026 UDCAMERA</span>
+    <a href="terms.html">Terms of Service &rarr;</a>
+  </footer>
+</main>
+</body>
+</html>

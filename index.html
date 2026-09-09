@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UDCAMERA Content Publisher</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #EAE7E0;
+    --surface: #FFFFFF;
+    --text: #221F1A;
+    --text-muted: #6E6A60;
+    --accent: #A15C2E;
+    --accent-soft: #E7D9C8;
+    --border: #D9D4C8;
+    --serif: "Source Serif 4", Georgia, "Noto Serif Thai", serif;
+    --sans: "IBM Plex Sans", "Noto Sans Thai", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16140F; --surface: #201D17; --text: #ECE7DC; --text-muted: #9C9686;
+      --accent: #E0975A; --accent-soft: #3A2E20; --border: #35301F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16140F; --surface: #201D17; --text: #ECE7DC; --text-muted: #9C9686;
+    --accent: #E0975A; --accent-soft: #3A2E20; --border: #35301F;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+  .wordmark {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .topbar nav { display: flex; gap: 1.25rem; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .topbar nav a { color: var(--text-muted); text-decoration: none; border-bottom: 1px solid transparent; }
+  .topbar nav a:hover, .topbar nav a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+
+  main {
+    flex: 1;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 5rem;
+  }
+
+  .doc-label {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 1.1rem;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    text-wrap: balance;
+  }
+
+  p.lede {
+    font-size: 1.08rem;
+    color: var(--text-muted);
+    max-width: 56ch;
+    margin: 0 0 2.6rem;
+  }
+
+  .links { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+  .links a {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+  }
+  .links a:hover, .links a:focus-visible { border-color: var(--accent); color: var(--accent); }
+
+  footer {
+    padding: 1.6rem 1.5rem;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="wordmark" href="index.html">UDCAMERA</a>
+  <nav>
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+</div>
+
+<main>
+  <span class="doc-label">Internal Tool</span>
+  <h1>UDCAMERA Content Publisher</h1>
+  <p class="lede">
+    An internal application built by UDCAMERA, a used-camera retailer (Udon Thani &ndash; Bang Saen),
+    for publishing the store's own product and camera-review videos to its own TikTok, Facebook, and
+    YouTube accounts.
+  </p>
+  <div class="links">
+    <a href="terms.html">Terms of Service &rarr;</a>
+    <a href="privacy.html">Privacy Policy &rarr;</a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 UDCAMERA &nbsp;·&nbsp; <a href="mailto:flykungza@gmail.com">flykungza@gmail.com</a>
+</footer>
+</body>
+</html>
